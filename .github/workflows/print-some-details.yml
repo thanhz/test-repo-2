@@ -6,7 +6,6 @@ on:
 
 jobs:
   upsert-develop-branch:
-    if: github.event.pull_request.user.login == 'scala-steward-thanhz[bot]'
     permissions: write-all
     runs-on: ubuntu-latest
     name: Print some details
