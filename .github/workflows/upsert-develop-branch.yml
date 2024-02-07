@@ -11,6 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Rebase `develop` branch to latest `origin/master`
     steps:
+      - name: Checkout develop branch
+        uses: actions/checkout@v2
+        with:
+          ref: develop
+          fetch-depth: 0
       - name: Rebase `develop` branch to latest `origin/main`
         run: |
             git config user.email "9700622+thanhz@users.noreply.github.com"
