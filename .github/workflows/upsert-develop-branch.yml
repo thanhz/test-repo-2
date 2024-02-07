@@ -2,7 +2,7 @@ name: Upsert `develop` branch
 
 on:
   push:
-    branches: main
+    branches: master
 
 jobs:
   upsert-develop-branch:
