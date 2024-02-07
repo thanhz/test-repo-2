@@ -10,6 +10,7 @@ jobs:
     name: Create `develop` branch or rebase it to latest `main`
     steps:
       - name: Create `develop` branch (if it does not exists)
+        permissions: write-all
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
