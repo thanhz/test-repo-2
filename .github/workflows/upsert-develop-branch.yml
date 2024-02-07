@@ -6,7 +6,7 @@ on:
 
 jobs:
   upsert-develop-branch:
-    if: github.event.pull_request.user.login == 'scala-steward-thanhz'
+    if: ${{ github.event.pull_request.user.login }} == 'scala-steward-thanhz'
     permissions: write-all
     runs-on: ubuntu-latest
     name: Create `develop` branch or rebase it to latest `main`
