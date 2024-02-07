@@ -6,28 +6,19 @@ on:
 
 jobs:
   upsert-develop-branch:
+    if: github.actor == 'thanhz'
     permissions: write-all
     runs-on: ubuntu-latest
-    name: Create `develop` branch or rebase it to latest `main`
+    name: Rebase `develop` branch to latest `origin/master`
     steps:
-      - name: Create `develop` branch (if it does not exists)
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
-            gh api --silent \
-                /repos/${{ github.repository }}/git/refs \
-                -f ref="refs/heads/develop" \
-                -f sha="${{ github.sha}}" ||
-                echo '`develop` branch already exists on ${{ github.repository }}'
       - name: Checkout develop branch
         uses: actions/checkout@v2
         with:
           ref: develop
           fetch-depth: 0
-
       - name: Rebase `develop` branch to latest `origin/main`
         run: |
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git config user.name "github-actions[bot]"
-            git rebase origin/main
+            git config user.email "9700622+thanhz@users.noreply.github.com"
+            git config user.name "thanhz"
+            git rebase origin/master
             git push -f -u origin develop
