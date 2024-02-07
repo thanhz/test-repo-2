@@ -6,7 +6,7 @@ on:
 
 jobs:
   upsert-develop-branch:
-    if: github.actor == 'thanhz'
+    if: github.event.pull_request.user.login == 'thanhz'
     permissions: write-all
     runs-on: ubuntu-latest
     name: Rebase `develop` branch to latest `origin/master`
