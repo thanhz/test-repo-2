@@ -11,5 +11,7 @@ lazy val root = (project in file("."))
 libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.2.18" % "test",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5",
-  "ch.qos.logback" % "logback-classic" % "1.4.14"
+  "ch.qos.logback" % "logback-classic" % "1.4.14",
+  "ch.qos.logback" % "logback-classic" % "1.4.14",
+  "org.typelevel" %% "cats-effect" % "3.4.1"
 )
