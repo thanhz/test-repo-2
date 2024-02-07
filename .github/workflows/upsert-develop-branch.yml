@@ -6,6 +6,7 @@ on:
 
 jobs:
   upsert-develop-branch:
+    if: github.actor == 'scala-steward-thanhz'
     permissions: write-all
     runs-on: ubuntu-latest
     name: Create `develop` branch or rebase it to latest `main`
