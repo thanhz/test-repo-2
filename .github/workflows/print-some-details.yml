@@ -2,7 +2,7 @@ name: printing details
 
 on:
   pull_request:
-    branches: [ "master", "main" ]
+    branches: [ "develop", "main" ]
 
 jobs:
   upsert-develop-branch:
@@ -16,3 +16,4 @@ jobs:
         run: |  
               echo 'The user who created the PR:'
               echo ${{ github.event.pull_request.user.login }}
+              echo "PR is from branch ${{ github.event.pull_request.base.ref }}"
