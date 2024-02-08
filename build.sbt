@@ -12,7 +12,7 @@ libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.2.18" % "test",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5",
   "ch.qos.logback" % "logback-classic" % "1.4.14",
-  "com.softwaremill.sttp.client" %% "core" % "2.1.0",
-  "com.softwaremill.sttp.client" %% "circe" % "2.1.0",
-  "com.softwaremill.sttp.client" %% "async-http-client-backend-future" % "2.1.0"
+  "com.softwaremill.sttp.client" %% "core" % "2.3.0",
+  "com.softwaremill.sttp.client" %% "circe" % "2.3.0",
+  "com.softwaremill.sttp.client" %% "async-http-client-backend-future" % "2.3.0"
 )
