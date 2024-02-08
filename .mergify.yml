@@ -1,8 +1,9 @@
 pull_request_rules:
   - name: automatic merge for Dependabot pull requests & Scala Steward
     conditions:
-      - author~=^dependabot(|-preview)\[bot\]$
-      - author=thanhz
+        - or:
+            - author~=^dependabot(|-preview)\[bot\]$
+            - author=thanz
     actions:
       merge:
         method: merge
