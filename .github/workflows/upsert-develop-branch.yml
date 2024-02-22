@@ -18,6 +18,5 @@ jobs:
       - name: Rebase `develop` branch to latest `origin/main`
         run: |
             git config user.email "9700622+thanhz@users.noreply.github.com"
-            git config user.name "thanhz"
             git rebase origin/master
             git push -f -u origin develop
